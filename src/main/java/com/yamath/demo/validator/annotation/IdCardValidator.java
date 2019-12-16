@@ -17,7 +17,7 @@ public class IdCardValidator implements ConstraintValidator<IdCard, Object> {
 
     @Override
     public boolean isValid(Object o, ConstraintValidatorContext constraintValidatorContext) {
-        return IdCardValidator.is18ByteIdCardComplex(o.toString());
+        return IdCardValidator.is18ByteIdCardComplex(String.valueOf(o));
     }
 
     @Override
